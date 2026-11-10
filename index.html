@@ -6,5 +6,5 @@ nav{display:flex;gap:2px;flex-wrap:wrap}.tab{color:#5b6475;text-decoration:none;
 .tab:hover{color:#0f3d3e}.tab.on{color:#0f3d3e;font-weight:600;border-bottom-color:#14a38b}iframe{flex:1;border:0;width:100%}</style></head><body>
 <header><div class='brand'><i></i>California Carrier Opportunity</div><nav><a class='tab' data-id='summary' href='#summary'>Executive summary</a><a class='tab' data-id='opportunity' href='#opportunity'>Customer opportunity</a><a class='tab' data-id='growth' href='#growth'>Marketing Analysis</a><a class='tab' data-id='economics' href='#economics'>Carrier economics</a><a class='tab' data-id='appendix' href='#appendix'>Appendix</a></nav></header><iframe id='f' title='report'></iframe>
 <script>const ids=['summary', 'opportunity', 'growth', 'economics', 'appendix'];function go(){let h=location.hash.slice(1);if(!ids.includes(h))h=ids[0];
-document.getElementById('f').src='reports/'+h+'.html';document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.id===h));}
+document.getElementById('f').src=h+'.html';document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.id===h));}
 window.addEventListener('hashchange',go);go();</script></body></html>
