@@ -1,0 +1,10 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Hippo · California Carrier Opportunity</title>
+<style>*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:-apple-system,"Segoe UI",Inter,Roboto,Arial,sans-serif;background:#f4f6f9;display:flex;flex-direction:column}
+header{background:#fff;border-bottom:1px solid #e4e8ee;padding:0 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.brand{font-weight:700;color:#0f3d3e;font-size:15px;padding:16px 0;white-space:nowrap}.brand i{display:inline-block;width:10px;height:10px;border-radius:3px;background:#14a38b;margin-right:8px}
+nav{display:flex;gap:2px;flex-wrap:wrap}.tab{color:#5b6475;text-decoration:none;padding:17px 14px 15px;font-size:14px;border-bottom:3px solid transparent}
+.tab:hover{color:#0f3d3e}.tab.on{color:#0f3d3e;font-weight:600;border-bottom-color:#14a38b}iframe{flex:1;border:0;width:100%}</style></head><body>
+<header><div class='brand'><i></i>California Carrier Opportunity</div><nav><a class='tab' data-id='summary' href='#summary'>Executive summary</a><a class='tab' data-id='opportunity' href='#opportunity'>Customer opportunity</a><a class='tab' data-id='growth' href='#growth'>Marketing Analysis</a><a class='tab' data-id='economics' href='#economics'>Carrier economics</a><a class='tab' data-id='appendix' href='#appendix'>Appendix</a></nav></header><iframe id='f' title='report'></iframe>
+<script>const ids=['summary', 'opportunity', 'growth', 'economics', 'appendix'];function go(){let h=location.hash.slice(1);if(!ids.includes(h))h=ids[0];
+document.getElementById('f').src='reports/'+h+'.html';document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.id===h));}
+window.addEventListener('hashchange',go);go();</script></body></html>
